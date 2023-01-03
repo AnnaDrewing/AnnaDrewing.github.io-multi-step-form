@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: hsl(217, 100%, 97%);
+}
+
+nav {
+    background-image: url('./assets/images/bg-sidebar-desktop.svg');
+    width: 274px;
+    height: 568px; 
+    background-color: hsl(217, 100%, 97%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.step {
+    box-sizing: border-box;
+    background-color: green;
+    height: 50px;
+    padding-left: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.step-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    width: 25px;
+    background-color: violet;
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white;
+}
+
+.step-info {
+    background-color: darkolivegreen;
+    display: flex;
+    flex-direction: column;
+}
+
+.step-nr {
+    background-color: brown;
+}
+
+.step-descr {
+    background-color: darkgoldenrod;
+}
