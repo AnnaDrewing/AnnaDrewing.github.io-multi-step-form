@@ -10,17 +10,19 @@ let userData = {
 };
 
 const tiles = document.querySelectorAll(".tile");
-console.log(tiles);
-const tileList = document.getElementsByClassName(".tile");
-console.log(tileList);
-const tile1 = document.getElementById("#tile-1");
-console.log(tile1);
+const steps = document.querySelectorAll(".step");
 
-for (let i = 0; i < tiles.length; i++) {
-  console.log("WOAH");
-  if (i % 2 == 0) {
-    console.log("YAY");
-    tiles[i].classList.remove("tile");
-    tiles[i].classList.add("vanishTile");
-  }
+for (const [index, step] of steps.entries()) {
+  step.addEventListener("click", () => {
+    showTile(index);
+  });
+}
+
+function showTile(tileNr) {
+  tiles.forEach((tile) => {
+    tile.classList.remove("vanishTile");
+    tile.classList.add("tile");
+  });
+  tiles[tileNr].classList.remove("tile");
+  tiles[tileNr].classList.add("vanishTile");
 }
