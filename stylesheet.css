@@ -22,6 +22,7 @@ body {
     box-sizing: border-box;
     padding: 20px;
     height: 568px;
+    width: 575px;
 }
 
 nav {
@@ -130,10 +131,17 @@ input {
     justify-content: flex-end;
 }
 
-#nextStep {
+.nextStep {
     padding: 10px 15px;
     border-radius: 5px;
     background-color:hsl(213, 96%, 18%);
     font-size: 16px;
     color: white;
+}
+
+.attribution {
+    color:hsl(213, 96%, 18%);
+    width: 800px;
+    margin: auto;
+    text-align: center;
 }
