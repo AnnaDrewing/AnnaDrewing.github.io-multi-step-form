@@ -21,6 +21,7 @@ body {
     background-color: darkorange;
     box-sizing: border-box;
     padding: 20px;
+    height: 568px;
 }
 
 nav {
@@ -83,6 +84,9 @@ nav {
 .tile { 
     box-sizing: border-box;
     background-color: brown;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .tile-title {
@@ -99,11 +103,28 @@ nav {
     margin: 10px;
 }
 
-.tile-form {
+form {
     background-color: cornflowerblue;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: hsl(213, 96%, 18%);
+    margin: 10px;
+}
+
+input {
+    margin: 10px 0px;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 700;
+    color:hsl(213, 96%, 18%);
+    padding: 12px 15px;
+    border: 1px solid hsl(231, 11%, 63%);
+    border-radius: 7px;
 }
 
 .tile-buttons {
+    margin-top: auto;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
