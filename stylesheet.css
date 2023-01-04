@@ -12,18 +12,18 @@ nav {
     background-color: hsl(217, 100%, 97%);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .step {
     box-sizing: border-box;
-    background-color: green;
-    height: 50px;
-    padding-left: 15%;
+    color: white;
+    margin: 37px 0px 0px 0px; 
+    padding-left: 13%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .step-icon {
@@ -32,22 +32,25 @@ nav {
     align-items: center;
     height: 25px;
     width: 25px;
-    background-color: violet;
     border: 1px solid white;
     border-radius: 50%;
     color: white;
+    margin-right: 10px;
+    padding: 3px;
 }
 
 .step-info {
-    background-color: darkolivegreen;
     display: flex;
     flex-direction: column;
+    text-transform: uppercase;
 }
 
 .step-nr {
-    background-color: brown;
+    font-weight: 400;
+    font-size: 80%;
 }
 
 .step-descr {
-    background-color: darkgoldenrod;
+    font-weight: 700;
+    font-size: 95%;
 }
