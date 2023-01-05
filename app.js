@@ -14,6 +14,27 @@ let userData = {
 };
 
 applyPlaceholderUserData();
+activateButtons();
+
+function activateButtons() {
+  const nextStepButtons = document.querySelectorAll(".nextStep");
+  for (const [index, button] of nextStepButtons.entries()) {
+    button.addEventListener("click", () => {
+      if (index < 3) {
+        showTile(index + 1);
+      }
+    });
+  }
+  const goBackButtons = document.querySelectorAll(".goBack");
+  console.log(goBackButtons);
+  for (const [index, button] of goBackButtons.entries()) {
+    button.addEventListener("click", () => {
+      if (index > 0 && index < 4) {
+        showTile(index - 1);
+      }
+    });
+  }
+}
 
 function applyPlaceholderUserData() {
   let name = document.getElementById("name");
@@ -78,7 +99,6 @@ for (const [index, tile] of tiles.entries()) {
 
 function showTile(tileNr) {
   stepIcons.forEach((icon) => {
-    console.log("showTile runs");
     if (icon.classList.contains("step-icon-active")) {
       icon.classList.remove("step-icon-active");
     }
