@@ -34,6 +34,10 @@ function activateButtons() {
       }
     });
   }
+  const confirmButton = document.getElementById("confirm");
+  confirmButton.addEventListener("click", () => {
+    showTile(4);
+  });
 }
 
 function applyPlaceholderUserData() {
@@ -107,7 +111,9 @@ function showTile(tileNr) {
     tile.classList.add("vanishTile");
     tile.classList.remove("tile");
   });
-  stepIcons[tileNr].classList.add("step-icon-active");
+  if (tileNr < 4) {
+    stepIcons[tileNr].classList.add("step-icon-active");
+  }
   tiles[tileNr].classList.remove("vanishTile");
   tiles[tileNr].classList.add("tile");
 }
