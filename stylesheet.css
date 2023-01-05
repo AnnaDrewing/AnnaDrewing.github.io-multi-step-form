@@ -139,9 +139,15 @@ input {
     color: white;
 }
 
+.placeholderText {
+    color: hsl(231, 11%, 63%);
+    font-weight: 500;
+}
+
 .attribution {
     color:hsl(213, 96%, 18%);
     width: 800px;
     margin: auto;
     text-align: center;
 }
+
