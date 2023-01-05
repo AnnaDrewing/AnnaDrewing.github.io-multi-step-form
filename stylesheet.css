@@ -62,6 +62,10 @@ nav {
     padding: 3px;
 }
 
+.step-icon-active {
+    background-color: hsl(206, 94%, 87%);
+}
+
 .step-info {
     display: flex;
     flex-direction: column;

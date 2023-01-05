@@ -1,6 +1,7 @@
 const tiles = document.querySelectorAll(".tile");
 console.log(tiles);
 const steps = document.querySelectorAll(".step");
+const stepIcons = document.querySelectorAll(".step-icon");
 let userData = {
   name: "e.g. Stephen King",
   email: "e.g. stephenking@lorem.com",
@@ -76,10 +77,17 @@ for (const [index, tile] of tiles.entries()) {
 }
 
 function showTile(tileNr) {
+  stepIcons.forEach((icon) => {
+    console.log("showTile runs");
+    if (icon.classList.contains("step-icon-active")) {
+      icon.classList.remove("step-icon-active");
+    }
+  });
   tiles.forEach((tile) => {
     tile.classList.add("vanishTile");
     tile.classList.remove("tile");
   });
+  stepIcons[tileNr].classList.add("step-icon-active");
   tiles[tileNr].classList.remove("vanishTile");
   tiles[tileNr].classList.add("tile");
 }
