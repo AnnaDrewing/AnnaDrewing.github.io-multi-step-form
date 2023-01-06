@@ -15,6 +15,7 @@ let userData = {
 
 applyPlaceholderUserData();
 activateButtons();
+getPlanSelection();
 
 function activateButtons() {
   const nextStepButtons = document.querySelectorAll(".nextStep");
@@ -117,3 +118,42 @@ function showTile(tileNr) {
   tiles[tileNr].classList.remove("vanishTile");
   tiles[tileNr].classList.add("tile");
 }
+
+function getPlanSelection() {
+  const arcade = document.getElementById("plan-arcade");
+  arcade.addEventListener("click", () => {
+    userData.plan = "arcade";
+    console.log("User chose the plan: " + userData.plan);
+  });
+  const advanced = document.getElementById("plan-advanced");
+  advanced.addEventListener("click", () => {
+    userData.plan = "advanced";
+    console.log("User chose the plan: " + userData.plan);
+  });
+  const pro = document.getElementById("plan-pro");
+  pro.addEventListener("click", () => {
+    userData.plan = "pro";
+    console.log("User chose the plan: " + userData.plan);
+  });
+  const slider = document.getElementById("toggle-slider");
+  slider.addEventListener("click", () => {
+    updateBillingPlans();
+  });
+}
+
+function updateBillingPlans() {
+  if (userData.billing == "monthly") {
+    userData.billing = "yearly";
+  } else {
+    userData.billing = "monthly";
+  }
+  console.log("User chose billing: " + userData.billing);
+}
+
+// let div = document.createElement("div");
+//     div.id = "div_id" ;
+//     div.className = "div_class";
+//     div.style = "background-color: red;";
+//     div.style.width = "100px";
+//     div.style.height = "100px";
+//     document.body.appendChild(div);
