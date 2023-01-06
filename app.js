@@ -2,6 +2,8 @@ const tiles = document.querySelectorAll(".tile");
 console.log(tiles);
 const steps = document.querySelectorAll(".step");
 const stepIcons = document.querySelectorAll(".step-icon");
+const checkboxDefault = document.getElementById("checkbox");
+checkboxDefault.checked = false;
 let userData = {
   name: "e.g. Stephen King",
   email: "e.g. stephenking@lorem.com",
@@ -135,25 +137,29 @@ function getPlanSelection() {
     userData.plan = "pro";
     console.log("User chose the plan: " + userData.plan);
   });
-  const slider = document.getElementById("toggle-slider");
+  const slider = document.getElementById("checkbox");
   slider.addEventListener("click", () => {
     updateBillingPlans();
   });
 }
 
 function updateBillingPlans() {
-  if (userData.billing == "monthly") {
+  const slider = document.getElementById("checkbox");
+  let plans = document.getElementsByClassName("plan");
+  if (slider.checked == true) {
     userData.billing = "yearly";
+    for (let plan of plans) {
+      let freeOffer = document.createElement("div");
+      freeOffer.innerHTML = "2 months free";
+      freeOffer.className = "freeOffer";
+      plan.appendChild(freeOffer);
+    }
   } else {
     userData.billing = "monthly";
+    for (let plan of plans) {
+      let freeOffer = document.getElementsByClassName("freeOffer");
+      plan.removeChild(freeOffer[0]);
+    }
   }
   console.log("User chose billing: " + userData.billing);
 }
-
-// let div = document.createElement("div");
-//     div.id = "div_id" ;
-//     div.className = "div_class";
-//     div.style = "background-color: red;";
-//     div.style.width = "100px";
-//     div.style.height = "100px";
-//     document.body.appendChild(div);
