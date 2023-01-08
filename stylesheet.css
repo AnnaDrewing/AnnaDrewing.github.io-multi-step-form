@@ -127,8 +127,12 @@ input {
     font-weight: 700;
     color:hsl(213, 96%, 18%);
     padding: 12px 15px;
-    border: 1px solid hsl(231, 11%, 63%);
+    border: 2px solid hsl(231, 11%, 63%);
     border-radius: 7px;
+}
+
+input:focus {
+    border-color: hsl(243, 100%, 62%);
 }
 
 .tile-buttons {
@@ -185,13 +189,16 @@ input {
 
 .plan {
     background-color: white;
-    border: 1px solid hsl(231, 11%, 63%);
+    border: 2px solid hsl(231, 11%, 63%);
     border-radius: 10px;
     width: 23%;
-    height: 150px;
     display: flex;
     flex-direction: column;
     padding: 15px;
+}
+
+.plan:focus {
+    border-color: hsl(243, 100%, 62%);
 }
 
 .icon {
@@ -202,7 +209,7 @@ input {
 .plan-name {
     color: hsl(213, 96%, 18%);
     font-weight: 700;
-    margin-top: auto;
+    margin-top: 45px;
 }
 
 .plan-cost {

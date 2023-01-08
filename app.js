@@ -137,8 +137,8 @@ function getPlanSelection() {
     userData.plan = "pro";
     console.log("User chose the plan: " + userData.plan);
   });
-  const slider = document.getElementById("checkbox");
-  slider.addEventListener("click", () => {
+  const billing = document.getElementById("checkbox");
+  billing.addEventListener("click", () => {
     updateBillingPlans();
   });
 }
